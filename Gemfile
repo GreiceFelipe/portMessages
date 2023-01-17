@@ -59,6 +59,15 @@ gem 'rest-client', '~> 2.1'
 # ActiveModel::Serializers allows you to generate your JSON in an object-oriented and convention-driven manner.
 gem 'active_model_serializers', '~> 0.10.13'
 
+# Bootstrap Ruby Gem
+gem 'bootstrap', '~> 5.2.2'
+
+# This gem provides popper.js assets as a Ruby gem.
+gem 'popper_js', '~> 2.11.5'
+
+# This gem provides jQuery and the jQuery-ujs driver for your Rails 4+ application.
+gem 'jquery-rails', '~> 4.5', '>= 4.5.1'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', '~> 1.7', '>= 1.7.1', platforms: %i[mri mingw x64_mingw]
