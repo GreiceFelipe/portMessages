@@ -1,2 +1,31 @@
-<h1>Employees#index</h1>
-<p>Find me in app/views/employees/index.html.erb</p>
+<h1>Claboradores </h1>
+<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+    Novo colaborador
+</button>
+<br>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Status</th>
+        <th scope="col">Função</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% @employees.each do |employee|%>
+        <tr>
+            <td><%= employee.name %></td>
+            <td><%= employee.email %></td>
+            <td><%= employee.status ? 'Ativo' : 'Inativo' %></td>
+            <td><%= employee.role %></td>
+            <td>
+                <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
+                    <a href="/employees/<%= employee.id %>/edit"class="btn btn-primary" type="button" disabled>Editar</a>
+                </span>
+            </td>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
